@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signature Detection Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-brand">
+            <div class="logo">ForgeryGuard</div>
+            <div class="tagline animate-tagline">Verify with Confidence</div>
+        </div>
+        <div class="navbar-links">
+            <span class="welcome-text">Welcome, {{ session['username'] }}</span>
+            <a href="{{ url_for('logout') }}">Logout</a>
+        </div>
+    </div>
+
+    <div class="result-container">
+        <center><h1>Prediction Result</h1></center>
+
+        <div class="result-box">
+            <p class="highlighted-result"><strong>Prediction:</strong> {{ result }}</p>
+            <p class="accuracy">Confidence: {{ confidence * 100 | round(2) }}%</p>
+            <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Uploaded Signature" class="signature-image">
+            <br>
+            <a href="{{ url_for('index') }}" class="btn btn-primary mt-3">Try Another</a>
+        </div>
+    </div>
+</body>
+</html>

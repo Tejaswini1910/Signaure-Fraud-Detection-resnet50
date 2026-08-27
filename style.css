@@ -1,0 +1,357 @@
+/* ------------------ General Reset ------------------ */
+body, h1, h2, p, a, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ------------------ Body Background ------------------ */
+body {
+    background: linear-gradient(to right, #f3e7e9, #e3eeff);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+/* ------------------ Navbar ------------------ */
+.navbar {
+    background: linear-gradient(90deg, #1f2937, #3b82f6);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.tagline,
+.animate-tagline {
+    font-size: 14px;
+    opacity: 0.9;
+    margin-top: 2px;
+    color: #f0e6ff;
+    animation: slideIn 2s ease;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+    color: #e0e7ff;
+}
+
+.welcome-text {
+    margin-right: 15px;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+}
+
+/* ------------------ Container & Frames ------------------ */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 3rem;
+}
+
+.left-frame, .right-frame {
+    width: 45%;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 36px;
+    color: #1f2937;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+.info-text {
+    color: #b4aeae;
+    font-size: 18px;
+    margin-bottom: 2rem;
+}
+
+/* ------------------ Form Inputs ------------------ */
+input[type="file"],
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    width: 90%;
+    border: 2px solid #689fd3;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.password-container {
+    position: relative;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.password-container input[type="password"],
+.password-container input[type="text"] {
+    padding-right: 40px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #6c757d;
+    font-size: 20px;
+}
+
+/* ------------------ Buttons ------------------ */
+form button,
+.right-frame button,
+.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #3b82f6;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+}
+
+form button:hover,
+.right-frame button:hover,
+.btn:hover {
+    background-color: #3b82f6;
+}
+
+.btn {
+    width: auto;
+    padding: 10px 20px;
+    background-color: #3b82f6;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #2563eb;
+}
+
+/* ------------------ Result Box ------------------ */
+.result-box {
+    background-color: #f9fafb;
+    border: 2px solid #e5e7eb;
+    padding: 50px 60px;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    display: block;
+    max-width: 900px;
+    width: 90%;
+    margin: 40px auto;
+    text-align: center;
+}
+/* ------------------ Highlighted Result ------------------ */
+.highlighted-result {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #3b82f6; /* Blue to match the theme */
+    background-color: #e0f7ff; /* Light blue background */
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.result-container {
+    margin-top: 60px; /* Increase the margin to add space */
+}
+
+.result-container h1 {
+    margin-top: 0;  /* Ensure no margin at the top */
+    font-size: 36px;
+    color: #1f2937;
+    text-align: center;
+    margin-bottom: 30px; /* Space below the heading */
+}
+
+.result-box p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #374151;
+}
+
+.prediction {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* ------------------ Images ------------------ */
+.signature-image,
+img {
+    max-width: 100%;
+    width: 300px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+}
+
+/* ------------------ Animations ------------------ */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+      transform: translateY(-30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .slide-down {
+    animation: slideDown 0.5s ease-out;
+  }
+  
+
+.animate-text {
+    animation: slideFadeIn 1s ease-out forwards;
+}
+
+/* ------------------ Utility ------------------ */
+.mt-3 {
+    margin-top: 20px;
+}
+
+/* ------------------ Home Page Specific ------------------ */
+.main-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slideIn 1s ease forwards;
+    padding: 40px 20px;
+}
+
+.content-box {
+    background: white;
+    padding: 50px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+    max-width: 600px;
+}
+
+.content-box:hover {
+    transform: scale(1);
+}
+
+.content-box img {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+.content-box h2 {
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.content-box p {
+    color: #555;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.content-box a button {
+    width: 160px;
+    margin: 10px;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    background-color: #4CAF50;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.content-box a button:hover {
+    background-color: #45a049;
+    transform: translateY(-3px);
+}
+
+/* ------------------ Accuracy Styling ------------------ */
+.accuracy {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #e0f7ff; /* Light blue background */
+    text-align: center;
+}
+
+/* You can also use color coding based on accuracy percentage */
+.accuracy.high {
+    background-color: #a5d6a7; /* Green for high confidence */
+    color: #388e3c;
+}
+
+.accuracy.low {
+    background-color: #ffcccb; /* Red for low confidence */
+    color: #d32f2f;
+}
